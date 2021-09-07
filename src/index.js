@@ -29,5 +29,6 @@ client.on('message', async message => {
         let content = messageReceived.substring(6);
         let contentMocked = await mock(content);
         message.channel.send(contentMocked, {files: ['assets/images/Mocking_SpongeBob.png']}); //Mocking_SpongeBob.png
+        message.delete();
     }
 });
